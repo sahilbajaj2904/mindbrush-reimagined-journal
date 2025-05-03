@@ -19,8 +19,11 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Where <span className="gradient-text">Real Feelings</span> Meet Real Tools
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-gray-600 mb-2 max-w-xl mx-auto lg:mx-0">
               Through guided journaling and mindfulness practices designed specifically for tweens and teens to navigate their emotions confidently.
+            </p>
+            <p className="text-lg md:text-xl text-penguin-600 font-medium mb-8 max-w-xl mx-auto lg:mx-0 italic">
+              Not just an app. Not just a journal. A habit for life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
               <Link to="/pricing" className="inline-block">

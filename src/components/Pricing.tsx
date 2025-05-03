@@ -7,7 +7,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Classic Journal",
-      price: "$29.99",
+      price: "₹999",
       features: [
         "Hardcover journal with 240 pages",
         "Research-backed daily prompts",
@@ -20,7 +20,7 @@ const Pricing = () => {
     },
     {
       name: "Premium Journal",
-      price: "$39.99",
+      price: "₹999",
       features: [
         "Premium vegan leather cover",
         "Research-backed daily prompts",

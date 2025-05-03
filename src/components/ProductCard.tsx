@@ -63,7 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
       <CardContent className="p-5">
         <p className="text-sm text-gray-600 mb-3">{product.description}</p>
-        <p className="font-semibold text-dearme-primary">{product.price}</p>
+        <p className="font-semibold text-dearme-primary">₹999</p>
       </CardContent>
       <CardFooter className="p-4 pt-0 flex gap-2">
         <Button 

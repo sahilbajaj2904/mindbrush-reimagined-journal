@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -78,7 +77,7 @@ const ProductDetail = () => {
               
               <div className="flex items-baseline mb-4">
                 <span className="text-gray-500 line-through mr-2">Rs. 1,400.00</span>
-                <span className="text-2xl font-medium mr-2">Rs. 1,185.00</span>
+                <span className="text-2xl font-medium mr-2">₹999.00</span>
                 <span className="bg-yellow-400 text-xs px-2 py-1 rounded">Sale</span>
               </div>
               
