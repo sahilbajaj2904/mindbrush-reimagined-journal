@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -24,7 +23,7 @@ const MarketplaceSection = () => {
       name: "Dear Calm",
       description: "A safe space to untangle anxious thoughts and build inner peace.",
       price: "₹999",
-      image: "https://images.unsplash.com/photo-1528938102132-4a9276b8e320?q=80&w=800&auto=format&fit=crop",
+      image: "/lovable-uploads/1289542d-fc29-4c51-ac54-e95b021b7ff2.png",
       tag: "Bestseller",
       category: "anxiety"
     },
@@ -33,7 +32,7 @@ const MarketplaceSection = () => {
       name: "Storm to Still",
       description: "For every storm inside, there's a calm after.",
       price: "₹1,199",
-      image: "https://images.unsplash.com/photo-1598520106830-8c45c2035460?q=80&w=800&auto=format&fit=crop",
+      image: "/lovable-uploads/17253d3a-6240-4141-859d-b616dbf30006.png",
       category: "anger"
     },
     {
@@ -41,7 +40,7 @@ const MarketplaceSection = () => {
       name: "Feel It. Heal It.",
       description: "A journal for emotions that don't have easy names.",
       price: "₹1,299",
-      image: "https://images.unsplash.com/photo-1589495374902-741e6d394d6e?q=80&w=800&auto=format&fit=crop",
+      image: "/lovable-uploads/774a5c68-208a-44a9-b9e9-806cfd018250.png",
       category: "sadness"
     },
     {
@@ -49,7 +48,7 @@ const MarketplaceSection = () => {
       name: "Pause Please",
       description: "Practice patience and focus in a noisy world.",
       price: "₹1,099",
-      image: "https://images.unsplash.com/photo-1606866131720-72a61d6a3f79?q=80&w=800&auto=format&fit=crop",
+      image: "/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png",
       tag: "New",
       category: "impulse"
     },
@@ -58,7 +57,7 @@ const MarketplaceSection = () => {
       name: "Unjumble Me",
       description: "For when your brain's doing too much.",
       price: "₹899",
-      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
+      image: "/lovable-uploads/d8f713e5-cd5a-4701-a25c-811f4dd321d2.png",
       category: "overthinking"
     },
     {
@@ -66,7 +65,7 @@ const MarketplaceSection = () => {
       name: "My Secret Space",
       description: "Where all feelings are welcome.",
       price: "₹1,499",
-      image: "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=800&auto=format&fit=crop",
+      image: "/lovable-uploads/e598dd28-818e-43e9-8cf3-a8a8d984336b.png",
       tag: "Premium",
       category: "general"
     },

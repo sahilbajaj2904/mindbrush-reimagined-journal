@@ -23,13 +23,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     setImageError(true);
   };
 
+  // Default fallback image if product image fails to load
+  const fallbackImage = "/placeholder.svg";
+
   return (
     <Card className="overflow-hidden border border-dearme-primary/10 transition-all duration-300 hover:shadow-md group">
       <div className="aspect-square overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10"/>
         {imageError ? (
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-            <p className="text-gray-500 text-sm">Image unavailable</p>
+          <div className="w-full h-full bg-gradient-to-b from-gray-300 to-gray-400 flex items-center justify-center">
+            <img 
+              src={fallbackImage}
+              alt="Placeholder"
+              className="w-1/2 h-1/2 object-contain opacity-40"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-gray-700 font-medium text-lg">Journal Cover</p>
+            </div>
           </div>
         ) : (
           <img 
