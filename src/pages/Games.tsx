@@ -4,12 +4,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Gamepad } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Games = () => {
   const comingSoonGames = [
     {
       title: "Emotion Explorer",
-      description: "Navigate through emotional landscapes and learn to identify feelings in this interactive adventure."
+      description: "Navigate through emotional landscapes and learn to identify feelings in this interactive adventure.",
+      image: "/lovable-uploads/6fe9f7f1-296b-4901-a6f8-0dbb3d3c505f.png"
     },
     {
       title: "Mindfulness Match",
@@ -39,7 +41,17 @@ const Games = () => {
               <Card key={index} className="overflow-hidden border-dearme-primary/20 shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-0">
                   <div className="bg-gradient-to-br from-dearme-primary/20 to-dearme-accent/10 h-48 flex items-center justify-center">
-                    <Gamepad className="h-16 w-16 text-dearme-primary opacity-70" />
+                    {game.image ? (
+                      <AspectRatio ratio={1/1} className="h-full w-full">
+                        <img 
+                          src={game.image} 
+                          alt={game.title} 
+                          className="h-full w-full object-contain"
+                        />
+                      </AspectRatio>
+                    ) : (
+                      <Gamepad className="h-16 w-16 text-dearme-primary opacity-70" />
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="inline-block bg-dearme-primary/10 text-dearme-primary text-sm font-medium px-3 py-1 rounded-full mb-3">
