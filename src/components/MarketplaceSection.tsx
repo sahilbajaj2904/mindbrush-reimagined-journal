@@ -48,7 +48,7 @@ const MarketplaceSection = () => {
       name: "Pause Please",
       description: "Practice patience and focus in a noisy world.",
       price: "₹999",
-      image: "/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png",
+      image: "/lovable-uploads/fc991169-d46d-44d3-a8b6-f07f8fd01281.png",
       tag: "New",
       category: "impulse"
     },
