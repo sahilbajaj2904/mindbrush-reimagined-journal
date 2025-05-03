@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Penguin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -9,6 +10,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 animate-fade-in">
+            <div className="flex items-center justify-center lg:justify-start mb-6">
+              <img 
+                src="public/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png"
+                alt="DearMe Logo" 
+                className="h-24 mr-2"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Empowering <span className="gradient-text">Emotional Wellness</span> for Teens
             </h1>

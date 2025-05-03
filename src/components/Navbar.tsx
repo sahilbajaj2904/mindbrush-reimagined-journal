@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart } from "lucide-react";
+import { Menu, Search, ShoppingCart, Penguin } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 
@@ -19,8 +19,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-xl md:text-2xl font-serif font-bold text-mindblue-600">
-              Dear<span className="text-mindpurple-500">Me</span>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="public/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png"
+                alt="DearMe Logo" 
+                className="h-12 mr-2"
+              />
             </Link>
             <div className="hidden md:ml-8 md:flex">
               <button className="text-gray-600" aria-label="Search">
@@ -61,6 +65,13 @@ const Navbar = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
+                <div className="flex justify-center mb-6 mt-4">
+                  <img 
+                    src="public/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png"
+                    alt="DearMe Logo" 
+                    className="h-16"
+                  />
+                </div>
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
                     <Link

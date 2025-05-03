@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import ProductHighlights from "@/components/ProductHighlights";
 import ProductGallery from "@/components/ProductGallery";
 import Accordion from "@/components/Accordion";
+import { Link } from "react-router-dom";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
@@ -34,13 +35,13 @@ const ProductDetail = () => {
               </button>
             </div>
 
-            <a href="/" className="text-center">
+            <Link to="/" className="text-center">
               <img 
-                src="https://www.mindbrush.co/cdn/shop/files/Logo_mindbrush_9391bea7-1878-489e-9ec1-c77a9e1afc0a_180x.png?v=1614060674" 
+                src="public/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png" 
                 alt="Dear Me Logo" 
                 className="h-12 mx-auto"
               />
-            </a>
+            </Link>
 
             <div className="flex items-center gap-8">
               <button className="text-gray-600" aria-label="Cart">
