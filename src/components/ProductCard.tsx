@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Card className="overflow-hidden border border-dearme-primary/10 transition-all duration-300 hover:shadow-md group">
       <div className="aspect-square overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"/>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10"/>
         {imageError ? (
           <div className="w-full h-full bg-gray-200 flex items-center justify-center">
             <p className="text-gray-500 text-sm">Image unavailable</p>
@@ -39,6 +39,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             onError={handleImageError}
           />
         )}
+        {/* Title overlay on image */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+          <h3 className="font-serif font-semibold text-xl text-white drop-shadow-md">
+            {product.name}
+          </h3>
+        </div>
         {product.tag && (
           <div className="absolute top-3 right-3 bg-dearme-primary text-white px-3 py-1 text-xs font-medium rounded-full z-20">
             {product.tag}
@@ -46,7 +52,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         )}
       </div>
       <CardContent className="p-5">
-        <h3 className="font-serif font-semibold text-lg mb-2">{product.name}</h3>
         <p className="text-sm text-gray-600 mb-3">{product.description}</p>
         <p className="font-semibold text-dearme-primary">{product.price}</p>
       </CardContent>
