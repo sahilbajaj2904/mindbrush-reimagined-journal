@@ -23,7 +23,7 @@ const HeroSection = () => {
               Through guided journaling and mindfulness practices designed specifically for tweens and teens to navigate their emotions confidently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
-              <Link to="/product" className="inline-block">
+              <Link to="/pricing" className="inline-block">
                 <Button className="bg-penguin-400 hover:bg-penguin-400/90 text-white px-8 py-6 text-lg font-medium shadow-md hover:shadow-lg transition-all w-full">
                   Discover Our Kit
                 </Button>
