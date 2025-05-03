@@ -32,15 +32,15 @@ const MarketplaceSection = () => {
       id: "2",
       name: "Storm to Still",
       description: "For every storm inside, there's a calm after.",
-      price: "₹1,199",
-      image: "/lovable-uploads/17253d3a-6240-4141-859d-b616dbf30006.png",
+      price: "₹999",
+      image: "/lovable-uploads/96209dd5-8cd2-4afb-98dc-53b26a7b8ac7.png",
       category: "anger"
     },
     {
       id: "3",
       name: "Feel It. Heal It.",
       description: "A journal for emotions that don't have easy names.",
-      price: "₹1,299",
+      price: "₹999",
       image: "/lovable-uploads/774a5c68-208a-44a9-b9e9-806cfd018250.png",
       category: "sadness"
     },
@@ -48,7 +48,7 @@ const MarketplaceSection = () => {
       id: "4",
       name: "Pause Please",
       description: "Practice patience and focus in a noisy world.",
-      price: "₹1,099",
+      price: "₹999",
       image: "/lovable-uploads/c2d8aef4-d4f2-4385-8d50-950eb424bb11.png",
       tag: "New",
       category: "impulse"
