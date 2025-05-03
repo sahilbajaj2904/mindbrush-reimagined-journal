@@ -57,7 +57,7 @@ const MarketplaceSection = () => {
       name: "Unjumble Me",
       description: "For when your brain's doing too much.",
       price: "₹899",
-      image: "/lovable-uploads/d8f713e5-cd5a-4701-a25c-811f4dd321d2.png",
+      image: "/lovable-uploads/fd229ed5-2ce5-4ebd-983c-bae23f5b9970.png",
       category: "overthinking"
     },
     {
