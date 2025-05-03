@@ -1,21 +1,14 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import InteractiveJournal from "./InteractiveJournal";
-
 const HeroSection = () => {
-  return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+  return <section className="pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 animate-fade-in">
             <div className="flex items-center justify-center lg:justify-start mb-6">
-              <img 
-                src="public/lovable-uploads/cfa7a1e6-4c61-4108-bdb7-5e325e258a48.png"
-                alt="DearMe Logo" 
-                className="h-24 mr-2"
-              />
+              
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Empowering <span className="gradient-text">Emotional Wellness</span> for Teens
@@ -44,8 +37,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
