@@ -20,7 +20,8 @@ const Games = () => {
     },
     {
       title: "Gratitude Garden",
-      description: "Grow your own virtual garden by practicing daily gratitude and positive reflection."
+      description: "Grow your own virtual garden by practicing daily gratitude and positive reflection.",
+      image: "/lovable-uploads/8d60e10c-d909-4fbc-9be7-4e5317d0de77.png"
     }
   ];
 
