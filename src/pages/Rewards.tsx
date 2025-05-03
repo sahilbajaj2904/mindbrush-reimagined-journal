@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, Heart, Star, Trophy } from "lucide-react";
+import RewardDashboard from "@/components/RewardDashboard";
 
 const Rewards = () => {
   const rewardTiers = [
@@ -44,6 +45,10 @@ const Rewards = () => {
               Track your child's emotional growth and reward their progress with our point system.
               Celebrate small wins and encourage positive emotional development.
             </p>
+          </div>
+          
+          <div className="mb-12">
+            <RewardDashboard />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -94,9 +99,9 @@ const Rewards = () => {
               </div>
               
               <div className="md:w-1/2 bg-dearme-light rounded-lg p-6 border border-dearme-primary/10">
-                <h3 className="font-semibold text-lg mb-4 text-dearme-text">Coming Soon: Rewards Dashboard</h3>
+                <h3 className="font-semibold text-lg mb-4 text-dearme-text">Coming Soon: Mobile App</h3>
                 <p className="text-gray-600 mb-4">
-                  Our interactive rewards dashboard is currently under development. Sign up to be notified when it's ready!
+                  Our mobile app will offer enhanced tracking features. Sign up to be notified when it's ready!
                 </p>
                 <div className="flex">
                   <input
