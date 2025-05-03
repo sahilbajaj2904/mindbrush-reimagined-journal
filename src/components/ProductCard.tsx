@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -16,15 +16,29 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const [imageError, setImageError] = useState(false);
+  
+  const handleImageError = () => {
+    console.log(`Image failed to load: ${product.image}`);
+    setImageError(true);
+  };
+
   return (
     <Card className="overflow-hidden border border-dearme-primary/10 transition-all duration-300 hover:shadow-md group">
       <div className="aspect-square overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"/>
-        <img 
-          src={product.image} 
-          alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {imageError ? (
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+            <p className="text-gray-500 text-sm">Image unavailable</p>
+          </div>
+        ) : (
+          <img 
+            src={product.image} 
+            alt={product.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={handleImageError}
+          />
+        )}
         {product.tag && (
           <div className="absolute top-3 right-3 bg-dearme-primary text-white px-3 py-1 text-xs font-medium rounded-full z-20">
             {product.tag}
