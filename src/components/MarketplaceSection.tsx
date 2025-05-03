@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -41,7 +40,7 @@ const MarketplaceSection = () => {
       name: "Feel It. Heal It.",
       description: "A journal for emotions that don't have easy names.",
       price: "₹999",
-      image: "/lovable-uploads/774a5c68-208a-44a9-b9e9-806cfd018250.png",
+      image: "/lovable-uploads/726904ce-7759-43c2-9283-fbbf1b59309e.png",
       category: "sadness"
     },
     {
