@@ -17,7 +17,7 @@ const HeroSection = () => {
               />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Empowering <span className="gradient-text">Emotional Wellness</span> for Teens
+              Where <span className="gradient-text">Real Feelings</span> Meet Real Tools
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
               Through guided journaling and mindfulness practices designed specifically for tweens and teens to navigate their emotions confidently.
