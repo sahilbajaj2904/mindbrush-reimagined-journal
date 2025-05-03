@@ -42,13 +42,13 @@ const Games = () => {
                 <CardContent className="p-0">
                   <div className="bg-gradient-to-br from-dearme-primary/20 to-dearme-accent/10 h-48 flex items-center justify-center">
                     {game.image ? (
-                      <AspectRatio ratio={1/1} className="h-full w-full">
+                      <div className="w-32 h-32 flex items-center justify-center">
                         <img 
                           src={game.image} 
                           alt={game.title} 
-                          className="h-full w-full object-contain"
+                          className="max-w-full max-h-full object-contain"
                         />
-                      </AspectRatio>
+                      </div>
                     ) : (
                       <Gamepad className="h-16 w-16 text-dearme-primary opacity-70" />
                     )}
