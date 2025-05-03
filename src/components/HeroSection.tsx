@@ -24,11 +24,11 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
               <Link to="/product" className="inline-block">
-                <Button className="bg-mindblue-500 hover:bg-mindblue-600 text-white px-8 py-6 text-lg w-full">
+                <Button className="bg-penguin-400 hover:bg-penguin-400/90 text-white px-8 py-6 text-lg font-medium shadow-md hover:shadow-lg transition-all w-full">
                   Discover Our Kit
                 </Button>
               </Link>
-              <Button variant="outline" className="border-mindblue-300 text-mindblue-600 hover:bg-mindblue-50 px-8 py-6 text-lg">
+              <Button variant="outline" className="border-penguin-400 text-penguin-800 hover:bg-penguin-50 px-8 py-6 text-lg">
                 Learn More
               </Button>
             </div>
