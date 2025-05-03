@@ -1,14 +1,16 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Search, ShoppingCart } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
     { name: "Features", href: "#features" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Pricing", href: "#pricing" },
+    { name: "Product", href: "/product" },
   ];
 
   return (
@@ -16,29 +18,40 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="#" className="text-xl md:text-2xl font-serif font-bold text-mindblue-600">
+            <Link to="/" className="text-xl md:text-2xl font-serif font-bold text-mindblue-600">
               Mindbrush<span className="text-mindpurple-500">Journal</span>
-            </a>
+            </Link>
+            <div className="hidden md:ml-8 md:flex">
+              <button className="text-gray-600" aria-label="Search">
+                <Search className="h-5 w-5" />
+              </button>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href.startsWith("/") ? item.href : item.href}
                 className="text-gray-600 hover:text-mindblue-500 transition-colors duration-200"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <Button className="bg-mindblue-500 hover:bg-mindblue-600 text-white">
-              Get Started
-            </Button>
+            <button className="text-gray-600" aria-label="Cart">
+              <ShoppingCart className="h-5 w-5" />
+            </button>
           </nav>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
+            <button className="text-gray-600" aria-label="Search">
+              <Search className="h-5 w-5" />
+            </button>
+            <button className="text-gray-600" aria-label="Cart">
+              <ShoppingCart className="h-5 w-5" />
+            </button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -49,17 +62,14 @@ const Navbar = () => {
               <SheetContent side="right">
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href.startsWith("/") ? item.href : item.href}
                       className="text-gray-600 hover:text-mindblue-500 transition-colors duration-200 py-2 px-4"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
-                  <Button className="bg-mindblue-500 hover:bg-mindblue-600 text-white mt-4">
-                    Get Started
-                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>

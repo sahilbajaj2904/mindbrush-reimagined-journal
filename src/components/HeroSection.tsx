@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -16,7 +17,7 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
               <Button className="bg-mindblue-500 hover:bg-mindblue-600 text-white px-8 py-6 text-lg">
-                Get Your Journal
+                <Link to="/product">Get Your Journal</Link>
               </Button>
               <Button variant="outline" className="border-mindblue-300 text-mindblue-600 hover:bg-mindblue-50 px-8 py-6 text-lg">
                 Learn More
@@ -31,7 +32,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-mindblue-100 to-mindpurple-100 rounded-xl blur-xl opacity-70"></div>
               <img
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                src="public/lovable-uploads/f1d52397-f748-4b2f-8d36-c8d419b71ec6.png"
                 alt="Mindbrush Journal"
                 className="relative w-full max-w-md rounded-xl shadow-xl"
               />
