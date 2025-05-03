@@ -1,6 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;500;600&family=Comic+Neue:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,83 +8,83 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --background: 39 54% 95%; /* #FEF6E8 beige background */
+    --foreground: 27 50% 14%; /* #352315 dark brown text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 43 100% 98%;  /* #FEF9F2 lighter cream */
+    --card-foreground: 27 50% 14%; /* #352315 dark brown */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 43 100% 98%; /* #FEF9F2 */
+    --popover-foreground: 27 50% 14%; /* #352315 */
 
-    --primary: 197 31% 41%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 20 91% 63%; /* #F68E4B coral/orange */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 197 30% 42%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 167 30% 61%; /* #7CBEAF mint */
+    --secondary-foreground: 27 50% 14%; /* #352315 */
 
-    --muted: 197 10% 95%;
-    --muted-foreground: 197 10% 40%;
+    --muted: 39 54% 95%; /* Lighter beige */
+    --muted-foreground: 27 40% 30%; /* Lighter brown */
 
-    --accent: 197 5% 99%;
-    --accent-foreground: 197 31% 41%;
+    --accent: 39 100% 67%; /* #FFC857 yellow */
+    --accent-foreground: 27 50% 14%; /* #352315 */
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84.2% 60.2%; /* Keep original destructive */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 197 10% 90%;
-    --input: 197 10% 90%;
-    --ring: 197 31% 41%;
+    --border: 27 30% 80%; /* Light brown border */
+    --input: 27 30% 80%;
+    --ring: 20 91% 63%; /* #F68E4B coral/orange */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 197 31% 41%;
+    --sidebar-background: 39 54% 92%; /* Slightly darker than main background */
+    --sidebar-foreground: 27 50% 14%;
+    --sidebar-primary: 20 91% 63%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 197 31% 41%;
+    --sidebar-accent: 39 30% 90%;
+    --sidebar-accent-foreground: 27 50% 14%;
+    --sidebar-border: 39 30% 85%;
+    --sidebar-ring: 20 91% 63%;
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 100%;
+    --background: 27 30% 13%; /* Dark brown background */
+    --foreground: 39 54% 95%; /* Light beige text */
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 100%;
+    --card: 27 25% 18%; /* Slightly lighter brown for cards */
+    --card-foreground: 39 54% 95%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 27 25% 18%;
+    --popover-foreground: 39 54% 95%;
 
-    --primary: 197 31% 41%;
+    --primary: 20 91% 63%; /* Keep coral as primary */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 197 20% 25%;
+    --secondary: 167 30% 41%; /* Darker mint */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 197 20% 20%;
-    --muted-foreground: 197 10% 70%;
+    --muted: 27 20% 25%;
+    --muted-foreground: 39 30% 80%;
 
-    --accent: 197 20% 20%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 39 80% 57%; /* Slightly darker yellow */
+    --accent-foreground: 27 50% 14%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 197 20% 25%;
-    --input: 197 20% 25%;
-    --ring: 197 31% 41%;
+    --border: 27 20% 30%;
+    --input: 27 20% 30%;
+    --ring: 20 91% 63%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 197 31% 41%;
+    --sidebar-background: 27 30% 10%;
+    --sidebar-foreground: 39 54% 95%;
+    --sidebar-primary: 20 91% 63%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 197 31% 41%;
+    --sidebar-accent: 27 15% 20%;
+    --sidebar-accent-foreground: 39 54% 95%;
+    --sidebar-border: 27 20% 25%;
+    --sidebar-ring: 20 91% 63%;
   }
 }
 
@@ -94,7 +94,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-dearme-background text-dearme-text font-sans;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23352315' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
   h1, h2, h3, h4, h5 {
@@ -103,7 +104,7 @@
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-dearme-primary to-dearme-accent bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-dearme-accent to-penguin-300 bg-clip-text text-transparent;
 }
 
 /* Journal-specific styles */
@@ -126,15 +127,27 @@
 /* Dear Me custom component styles */
 @layer components {
   .dearme-button-primary {
-    @apply bg-dearme-primary text-white hover:bg-dearme-accent transition-colors;
+    @apply bg-dearme-accent text-white hover:bg-dearme-accent/90 transition-colors;
   }
   
   .dearme-button-outline {
-    @apply border border-dearme-primary text-dearme-primary hover:bg-dearme-primary/10 transition-colors;
+    @apply border border-dearme-accent text-dearme-accent hover:bg-dearme-accent/10 transition-colors;
   }
   
   .dearme-card {
     @apply bg-dearme-light border border-dearme-primary/20 rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .penguin-card {
+    @apply bg-gradient-to-b from-dearme-light to-dearme-background border border-penguin-400/20 rounded-xl shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  .penguin-button {
+    @apply bg-penguin-400 hover:bg-penguin-400/90 text-white font-medium px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all;
+  }
+
+  .penguin-input {
+    @apply bg-white/80 border border-penguin-400/30 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-penguin-400/50 focus:border-transparent;
   }
 }
 
@@ -196,4 +209,15 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* New penguin-themed styles */
+.penguin-pattern {
+  background-color: #FEF6E8;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f68e4b' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.book-pattern {
+  background-color: #FEF9F2;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264.888-.14 1.24.293 1.854.705 2.234 1.237.63.88 1.13 1.76 1.13 3.53 0 1.77-.5 2.65-1.13 3.53-.38.53-.99.94-2.23 1.24-.17.12-.53-.01-.89-.14-.36.13-.72.26-.89.14-1.24-.3-1.85-.71-2.23-1.24-.63-.88-1.13-1.76-1.13-3.53 0-1.77.5-2.65 1.13-3.53.38-.53.99-.94 2.23-1.24.17-.12.53.01.89.14zm75.63 0c.357-.13.72-.264.888-.14 1.24.293 1.854.705 2.234 1.237.63.88 1.13 1.76 1.13 3.53 0 1.77-.5 2.65-1.13 3.53-.38.53-.99.94-2.23 1.24-.17.12-.53-.01-.89-.14-.36.13-.72.26-.89.14-1.24-.3-1.85-.71-2.23-1.24-.63-.88-1.13-1.76-1.13-3.53 0-1.77.5-2.65 1.13-3.53.38-.53.99-.94 2.23-1.24.17-.12.53.01.89.14z' fill='%237cbeaf' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
 }

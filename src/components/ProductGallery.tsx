@@ -19,9 +19,9 @@ const ProductGallery = () => {
 
   return (
     <div>
-      <div className="mb-4 aspect-square relative overflow-hidden rounded-lg border shadow-md">
+      <div className="mb-4 aspect-square relative overflow-hidden rounded-xl border border-dearme-accent/20 shadow-md bg-gradient-to-b from-dearme-light to-dearme-background">
         {showJournal ? (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-4">
+          <div className="w-full h-full flex items-center justify-center book-pattern p-4">
             <div className="w-full h-full flex items-center justify-center">
               <div className="w-full max-w-md transform scale-[0.85] relative">
                 {/* Book shadow effect */}
@@ -43,7 +43,11 @@ const ProductGallery = () => {
         {thumbnails.map((thumb, index) => (
           <button 
             key={index}
-            className={`border rounded-md overflow-hidden aspect-square ${selectedImage === thumb && !showJournal ? 'border-black shadow-md' : 'border-gray-200 hover:border-gray-300'}`}
+            className={`border rounded-md overflow-hidden aspect-square ${
+              selectedImage === thumb && !showJournal 
+                ? 'border-dearme-accent shadow-md' 
+                : 'border-dearme-accent/20 hover:border-dearme-accent/50'
+            }`}
             onClick={() => {
               setSelectedImage(thumb);
               setShowJournal(false);
@@ -57,10 +61,14 @@ const ProductGallery = () => {
           </button>
         ))}
         <button 
-          className={`border rounded-md overflow-hidden aspect-square flex items-center justify-center ${showJournal ? 'border-black bg-mindblue-50 shadow-md' : 'border-gray-200 hover:border-gray-300 hover:bg-mindblue-50/50'}`}
+          className={`border rounded-md overflow-hidden aspect-square flex items-center justify-center ${
+            showJournal 
+              ? 'border-dearme-accent bg-dearme-mint/20 shadow-md' 
+              : 'border-dearme-accent/20 hover:border-dearme-accent/50 hover:bg-dearme-mint/10'
+          }`}
           onClick={() => setShowJournal(true)}
         >
-          <BookOpen className="h-5 w-5 text-mindblue-500" />
+          <BookOpen className="h-5 w-5 text-dearme-accent" />
         </button>
       </div>
     </div>

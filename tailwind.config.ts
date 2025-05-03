@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,45 +53,39 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Dear Me brand colors
+        // DearMe brand colors based on the penguin logo
         dearme: {
-          primary: "#487b8c", // Primary color for buttons, headers, icons, CTAs
-          accent: "#4a7c8d", // Accent color for hover states, secondary buttons
-          text: "#000000", // Base text color
-          background: "#ffffff", // Clean white background
-          light: "#fefefe", // Light accent color for cards, inputs
+          primary: "#352315", // Dark brown from the penguin body
+          accent: "#F68E4B", // Orange from feet and cards
+          text: "#352315", // Text color (dark brown)
+          background: "#FEF6E8", // Cream/beige background
+          light: "#FEF9F2", // Lighter cream for cards, inputs
+          mint: "#7CBEAF", // Mint green from the book
+          yellow: "#FFC857", // Yellow from the emoji
+          coral: "#F68E4B", // Coral/orange from the feet
+          beige: "#FEF6E8", // Warm beige background
+          check: "#6B8F71", // Green from check mark
         },
         // Additional colors
-        mindblue: {
-          50: "#f0f7fa",
-          100: "#e0eff5",
-          200: "#c1dfeb",
-          300: "#92c5da",
-          400: "#5ea3c2",
-          500: "#487b8c", // Brand primary
-          600: "#3a6b7e",
-          700: "#345a6a",
-          800: "#2e4b59",
-          900: "#2a404c",
-        },
-        mindpurple: {
-          50: "#f5f3fa",
-          100: "#eae5f4",
-          200: "#d1cae7",
-          300: "#b1a5d6",
-          400: "#8c7ac0",
-          500: "#7a6aaf",
-          600: "#675497",
-          700: "#56457c",
-          800: "#483c67",
-          900: "#3f3655",
-          950: "#2a2239",
+        penguin: {
+          50: "#fef6e8",
+          100: "#fdebd0",
+          200: "#fad6a2",
+          300: "#ffc857", // Yellow
+          400: "#f68e4b", // Coral
+          500: "#7cbeaf", // Mint
+          600: "#6B8F71", // Check green
+          700: "#5a463b",
+          800: "#352315", // Dark brown
+          900: "#2a1c12",
+          950: "#1a110a",
         },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
         handwriting: ['Caveat', 'cursive'],
+        comic: ['Comic Neue', 'cursive'], // Adding a more playful font for the penguin theme
       },
       keyframes: {
         "accordion-down": {
@@ -101,10 +96,25 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "bounce-gentle": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        'warm-gradient': 'linear-gradient(to right bottom, #fef6e8, #fff2e2, #ffeeda, #ffead3, #ffe6cc)',
+        'mint-gradient': 'linear-gradient(to right bottom, #7cbeaf, #8ac5b8, #97ccc2, #a4d4cb, #b0dbd5)',
+        'coral-gradient': 'linear-gradient(to right bottom, #f68e4b, #f79b60, #f9a874, #fab589, #fbc19e)',
       },
     },
   },
