@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -65,7 +66,7 @@ const MarketplaceSection = () => {
       name: "My Secret Space",
       description: "Where all feelings are welcome.",
       price: "₹1,499",
-      image: "/lovable-uploads/e598dd28-818e-43e9-8cf3-a8a8d984336b.png",
+      image: "/lovable-uploads/b81d04a8-fb35-4804-b02a-2365c4d94dd7.png",
       tag: "Premium",
       category: "general"
     },
