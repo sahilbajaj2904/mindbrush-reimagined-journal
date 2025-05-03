@@ -85,15 +85,15 @@ const MarketplaceSection = () => {
             Explore our range of specialized journals designed to support specific emotional needs for teens and families.
           </p>
           
-          {/* Desktop Category Tabs */}
+          {/* Desktop Category Tabs - Improved styling */}
           <div className="hidden md:block">
             <Tabs defaultValue="all" className="w-full" onValueChange={setActiveCategory}>
-              <TabsList className="grid grid-cols-3 lg:grid-cols-7 mb-8">
+              <TabsList className="grid grid-cols-3 lg:grid-cols-7 mb-8 bg-dearme-light border border-dearme-primary/10 p-1 rounded-lg">
                 {categories.map(category => (
                   <TabsTrigger 
                     key={category.id} 
                     value={category.id}
-                    className="text-sm whitespace-normal py-2 h-auto"
+                    className="text-sm whitespace-normal py-2 h-auto font-medium data-[state=active]:bg-white data-[state=active]:text-dearme-primary data-[state=active]:shadow-sm"
                   >
                     {category.name}
                   </TabsTrigger>
@@ -102,10 +102,10 @@ const MarketplaceSection = () => {
             </Tabs>
           </div>
           
-          {/* Mobile Category Dropdown */}
+          {/* Mobile Category Dropdown - Improved styling */}
           <div className="md:hidden flex flex-wrap gap-4 justify-center">
             <select 
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-dearme-primary/20 rounded-md bg-white shadow-sm text-dearme-text focus:outline-none focus:ring-2 focus:ring-dearme-primary/20"
               value={activeCategory}
               onChange={(e) => setActiveCategory(e.target.value)}
             >
