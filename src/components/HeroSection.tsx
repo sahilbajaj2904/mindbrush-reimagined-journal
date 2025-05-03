@@ -11,9 +11,9 @@ const HeroSection = () => {
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 animate-fade-in">
             <div className="flex items-center justify-center lg:justify-start mb-6">
               <img 
-                src="/lovable-uploads/cfa7a1e6-4c61-4108-bdb7-5e325e258a48.png" 
+                src="/lovable-uploads/f11f421a-1000-4fbb-b9cd-5a7c9ff8d11b.png" 
                 alt="DearMe Logo" 
-                className="h-16 animate-bounce-slow" 
+                className="h-32 animate-bounce-slow" 
               />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
