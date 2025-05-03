@@ -150,23 +150,23 @@ const RewardDashboard = () => {
           </CardHeader>
           <CardContent className="pt-2">
             <div className="h-[300px]">
-              <ChartContainer
-                config={{
-                  points: { theme: { light: "#9b87f5", dark: "#9b87f5" } },
-                }}
-              >
-                <AreaChart data={progressData}>
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart
+                  data={progressData}
+                  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                >
                   <defs>
                     <linearGradient id="colorPoints" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#9b87f5" stopOpacity={0.8} />
                       <stop offset="95%" stopColor="#9b87f5" stopOpacity={0.1} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="day" />
-                  <YAxis />
-                  <ChartTooltip
-                    content={<ChartTooltipContent />}
+                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                  <XAxis dataKey="day" tick={{ fontSize: 12 }} />
+                  <YAxis tick={{ fontSize: 12 }} />
+                  <Tooltip
+                    contentStyle={{ backgroundColor: "white", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}
+                    labelStyle={{ fontWeight: "bold", marginBottom: "4px" }}
                   />
                   <Area
                     type="monotone"
@@ -177,7 +177,7 @@ const RewardDashboard = () => {
                     name="Points"
                   />
                 </AreaChart>
-              </ChartContainer>
+              </ResponsiveContainer>
             </div>
           </CardContent>
         </Card>
@@ -188,25 +188,40 @@ const RewardDashboard = () => {
             <CardDescription>How you're earning your points</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="h-[300px] flex justify-center items-center">
-              <PieChart width={250} height={250}>
-                <Pie
-                  data={pointsDistribution}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  outerRadius={80}
-                  fill="#8884d8"
-                  dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                >
-                  {pointsDistribution.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
-              </PieChart>
+            <div className="h-[300px] flex items-center justify-center">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={pointsDistribution}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    dataKey="value"
+                    nameKey="name"
+                    label={({ name, percent }) => `${(percent * 100).toFixed(0)}%`}
+                  >
+                    {pointsDistribution.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(value) => `${value} points`} />
+                  <Legend 
+                    layout="vertical" 
+                    verticalAlign="middle" 
+                    align="right"
+                    iconSize={10}
+                    iconType="circle"
+                    payload={pointsDistribution.map(item => ({
+                      value: item.name,
+                      type: 'circle',
+                      id: item.name,
+                      color: item.color,
+                    }))}
+                  />
+                </PieChart>
+              </ResponsiveContainer>
             </div>
           </CardContent>
         </Card>
