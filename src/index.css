@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -102,4 +102,21 @@
 
 .gradient-text {
   @apply bg-gradient-to-r from-mindblue-500 to-mindpurple-400 bg-clip-text text-transparent;
+}
+
+/* Journal-specific styles */
+.perspective {
+  perspective: 1000px;
+}
+
+.rotate-y-half {
+  transform: rotateY(15deg) translateX(20px);
+}
+
+.-rotate-y-half {
+  transform: rotateY(-15deg) translateX(-20px);
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
 }

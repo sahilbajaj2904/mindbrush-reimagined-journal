@@ -21,8 +21,14 @@ const ProductGallery = () => {
     <div>
       <div className="mb-4 aspect-square relative overflow-hidden rounded-lg border">
         {showJournal ? (
-          <div className="w-full h-full flex items-center justify-center bg-white p-4">
-            <InteractiveJournal />
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-4">
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full max-w-md transform scale-90 relative">
+                {/* Book shadow effect */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] h-8 bg-black opacity-10 blur-md rounded-full z-0"></div>
+                <InteractiveJournal />
+              </div>
+            </div>
           </div>
         ) : (
           <img 
