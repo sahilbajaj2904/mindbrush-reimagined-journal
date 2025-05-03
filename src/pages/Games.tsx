@@ -15,7 +15,8 @@ const Games = () => {
     },
     {
       title: "Mindfulness Match",
-      description: "A matching game that strengthens focus and introduces mindfulness practices."
+      description: "A matching game that strengthens focus and introduces mindfulness practices.",
+      image: "/lovable-uploads/0f86e666-4dc8-489f-b275-2bb15d1e1747.png"
     },
     {
       title: "Gratitude Garden",
