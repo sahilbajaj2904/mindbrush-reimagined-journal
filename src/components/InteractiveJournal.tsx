@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { BookOpen, ArrowLeft, ArrowRight, Pen, Sticker } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -511,3 +512,162 @@ const InteractiveJournal = () => {
                 Page {currentPage + 1} of {journalPages.length}
               </div>
             </div>
+
+            <CardContent className="p-6">
+              {/* Title */}
+              <h2 className="text-xl md:text-2xl font-serif mb-4">{page.title}</h2>
+              
+              {/* Content with writing animation */}
+              <div className="mb-6 relative">
+                {isWriting ? (
+                  <div className="text-gray-700 space-y-2 min-h-[80px]">
+                    <p className="relative">
+                      {writtenText}
+                      {writingProgress < page.content.length && (
+                        <span className="absolute animate-pulse">|</span>
+                      )}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="text-gray-700 space-y-2">
+                    <p>{page.content}</p>
+                  </div>
+                )}
+                
+                {/* Drawing canvas - appears when isDrawMode is true */}
+                {isDrawMode && (
+                  <div className="relative mt-4">
+                    <canvas
+                      ref={canvasRef}
+                      width={300}
+                      height={150}
+                      className="border border-gray-300 rounded-md bg-white bg-opacity-70 w-full touch-none"
+                      onMouseDown={startDrawing}
+                      onMouseMove={draw}
+                      onMouseUp={endDrawing}
+                      onMouseLeave={endDrawing}
+                      onTouchStart={startDrawing}
+                      onTouchMove={draw}
+                      onTouchEnd={endDrawing}
+                    ></canvas>
+                    
+                    {/* Color picker */}
+                    <div className="flex space-x-2 mt-2">
+                      {["#5e3b1c", "#3b82f6", "#10b981", "#ef4444", "#8b5cf6"].map((color) => (
+                        <button
+                          key={color}
+                          className="w-6 h-6 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                          style={{ backgroundColor: color }}
+                          onClick={() => changeDrawColor(color)}
+                        ></button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              {/* Penguin character with quote bubble */}
+              <div className="flex items-end mb-8">
+                <div className="relative flex-shrink-0">
+                  {/* Penguin character with dynamic mood */}
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-xl" role="img" aria-label="Penguin">🐧</span>
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-1 shadow-sm">
+                    {page.penguinMood === "Happy" && <span>😊</span>}
+                    {page.penguinMood === "Peaceful" && <span>😌</span>}
+                    {page.penguinMood === "Curious" && <span>🤔</span>}
+                    {page.penguinMood === "Thoughtful" && <span>🧐</span>}
+                    {page.penguinMood === "Proud" && <span>😎</span>}
+                  </div>
+                </div>
+                
+                {/* Speech bubble with quote */}
+                <div className="relative ml-2 bg-white bg-opacity-80 p-3 rounded-lg rounded-bl-none shadow-sm border border-gray-100 max-w-[80%]">
+                  <div className="absolute left-0 bottom-0 w-3 h-3 bg-white transform -translate-x-2 rotate-45 border-l border-b border-gray-100"></div>
+                  <p className="text-sm">{page.penguinQuote}</p>
+                </div>
+              </div>
+              
+              {/* Interactive elements */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {/* Draw/Write toggle */}
+                <Button 
+                  variant={isDrawMode ? "default" : "outline"} 
+                  size="sm"
+                  className={`transition-all ${isDrawMode ? 'bg-mindblue-500' : ''}`}
+                  onClick={toggleDrawMode}
+                >
+                  <Pen className="h-4 w-4 mr-1" />
+                  {isDrawMode ? 'Drawing Mode' : 'Draw Instead'}
+                </Button>
+                
+                {/* Sticker button */}
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => toggleSticker(0)}
+                >
+                  <Sticker className="h-4 w-4 mr-1" />
+                  Add Sticker
+                </Button>
+                
+                {/* Emoji selector */}
+                <div className="flex space-x-1">
+                  {["❤️", "👍", "🌟", "✨", "🙌"].map((emoji) => (
+                    <button
+                      key={emoji}
+                      className={`w-8 h-8 flex items-center justify-center rounded-full transition-transform ${selectedEmoji === emoji ? 'bg-gray-100 scale-110' : 'hover:bg-gray-50'}`}
+                      onClick={() => selectEmoji(emoji)}
+                    >
+                      {emoji}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Stickers that appear when toggled */}
+              <div className="relative h-20 mt-4">
+                {showStickers[0] && (
+                  <div className="absolute animate-bounce delay-100 top-0 left-5">
+                    <div className="transform rotate-12 transition-transform hover:scale-110">
+                      <img 
+                        src="https://cdn.pixabay.com/photo/2014/04/03/10/32/butterfly-310938_640.png" 
+                        alt="Butterfly sticker" 
+                        className="h-12 w-12 object-contain" 
+                        style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))" }}
+                      />
+                    </div>
+                  </div>
+                )}
+                
+                {showStickers[1] && (
+                  <div className="absolute animate-bounce delay-300 top-5 left-20">
+                    <div className="transform -rotate-6 transition-transform hover:scale-110">
+                      <img 
+                        src="https://cdn.pixabay.com/photo/2017/01/31/14/03/animal-2024350_640.png" 
+                        alt="Star sticker" 
+                        className="h-10 w-10 object-contain" 
+                        style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.1))" }}
+                      />
+                    </div>
+                  </div>
+                )}
+                
+                {selectedEmoji && (
+                  <div className="absolute animate-bounce delay-200 bottom-0 right-10">
+                    <div className="transform rotate-3 transition-transform hover:scale-110 text-2xl">
+                      <span role="img" aria-label="Selected emoji">{selectedEmoji}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InteractiveJournal;
