@@ -12,8 +12,8 @@ const ProductHighlights = () => {
               <User className="h-5 w-5 text-gray-700" />
             </div>
             <div>
-              <h3 className="font-medium">ENDORSED BY</h3>
-              <p className="text-sm text-gray-600">Psychologists, Teachers and Mindfulness experts</p>
+              <h3 className="font-medium">APPROVED BY</h3>
+              <p className="text-sm text-gray-600">Psychologists, Educators and Teen Wellness Experts</p>
             </div>
           </div>
           
@@ -22,8 +22,8 @@ const ProductHighlights = () => {
               <Clock className="h-5 w-5 text-gray-700" />
             </div>
             <div>
-              <h3 className="font-medium">NO RISK PURCHASE</h3>
-              <p className="text-sm text-gray-600">66 day money-back guarantee</p>
+              <h3 className="font-medium">RISK-FREE TRIAL</h3>
+              <p className="text-sm text-gray-600">30-day money-back guarantee</p>
             </div>
           </div>
           
@@ -32,8 +32,8 @@ const ProductHighlights = () => {
               <Users className="h-5 w-5 text-gray-700" />
             </div>
             <div>
-              <h3 className="font-medium">50,000+ HAPPY CUSTOMERS</h3>
-              <p className="text-sm text-gray-600">Join the movement</p>
+              <h3 className="font-medium">TRUSTED BY 10,000+ TEENS</h3>
+              <p className="text-sm text-gray-600">And 250+ schools across India</p>
             </div>
           </div>
           
@@ -42,8 +42,8 @@ const ProductHighlights = () => {
               <Star className="h-5 w-5 text-gray-700" />
             </div>
             <div>
-              <h3 className="font-medium">RATED 4.79 STARS</h3>
-              <p className="text-sm text-gray-600">Based on 50,000 customers</p>
+              <h3 className="font-medium">PARENT APPROVED</h3>
+              <p className="text-sm text-gray-600">97% satisfaction rate among parents</p>
             </div>
           </div>
         </div>

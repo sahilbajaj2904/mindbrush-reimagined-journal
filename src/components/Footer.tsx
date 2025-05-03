@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Mindbrush<span className="text-mindpurple-300">Journal</span></h3>
-            <p className="text-gray-400 mb-4">Journaling for mindfulness and mental clarity.</p>
+            <h3 className="text-xl font-serif font-bold mb-4">Dear<span className="text-mindpurple-300">Me</span></h3>
+            <p className="text-gray-400 mb-4">Empowering emotional wellness for teens through guided journaling.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Instagram</span>
@@ -27,14 +27,15 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
+            <p className="mt-4 text-sm text-gray-400">Be Part of the Movement. Follow Dear Me for Stories, Tips, and Tools.</p>
           </div>
           
           <div>
             <h4 className="text-white font-medium mb-4">Company</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Our Story</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Our Mission</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partner With Us</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press</a></li>
             </ul>
           </div>
@@ -42,28 +43,28 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-medium mb-4">Resources</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Mental Health Tips</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Emotional Well-being Blog</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Teen Mental Health Tips</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Journal Guides</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Ask Anything</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-white font-medium mb-4">Contact</h4>
+            <h4 className="text-white font-medium mb-4">Support</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Customer Support</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partnerships</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Wholesale Inquiries</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Get in Touch</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Refund Policy</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Data & Privacy</a></li>
             </ul>
           </div>
         </div>
         
         <div className="pt-8 mt-8 border-t border-gray-800 text-gray-400 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>© 2025 Mindbrush Journal. All rights reserved.</p>
+            <p>© 2025 Dear Me. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Data & Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
             </div>

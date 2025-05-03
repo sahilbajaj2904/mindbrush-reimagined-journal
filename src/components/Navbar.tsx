@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Features", href: "#features" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Product", href: "/product" },
+    { name: "Explore Kits", href: "#features" },
+    { name: "Our Mission", href: "#testimonials" },
+    { name: "Get in Touch", href: "#pricing" },
+    { name: "Ask Anything", href: "#faq" },
+    { name: "Insights & Stories", href: "/blog" },
   ];
 
   return (
@@ -19,7 +20,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="text-xl md:text-2xl font-serif font-bold text-mindblue-600">
-              Mindbrush<span className="text-mindpurple-500">Journal</span>
+              Dear<span className="text-mindpurple-500">Me</span>
             </Link>
             <div className="hidden md:ml-8 md:flex">
               <button className="text-gray-600" aria-label="Search">

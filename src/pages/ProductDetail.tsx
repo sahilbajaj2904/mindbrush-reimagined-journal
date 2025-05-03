@@ -11,7 +11,7 @@ import Accordion from "@/components/Accordion";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
-  const [selectedColor, setSelectedColor] = useState("Pristine White");
+  const [selectedColor, setSelectedColor] = useState("Pastel Blue");
 
   const incrementQuantity = () => {
     setQuantity(prev => prev + 1);
@@ -37,7 +37,7 @@ const ProductDetail = () => {
             <a href="/" className="text-center">
               <img 
                 src="https://www.mindbrush.co/cdn/shop/files/Logo_mindbrush_9391bea7-1878-489e-9ec1-c77a9e1afc0a_180x.png?v=1614060674" 
-                alt="Mindbrush Journal Logo" 
+                alt="Dear Me Logo" 
                 className="h-12 mx-auto"
               />
             </a>
@@ -54,11 +54,11 @@ const ProductDetail = () => {
       <nav className="border-b">
         <div className="container mx-auto px-4 py-4">
           <ul className="flex justify-center space-x-8 text-sm">
-            <li><a href="#" className="text-gray-600 hover:text-gray-900">Shop</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-900">About Us</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-900">Contact Us</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-900">FAQs</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-gray-900">Blog</a></li>
+            <li><a href="#" className="text-gray-600 hover:text-gray-900">Explore Kits</a></li>
+            <li><a href="#" className="text-gray-600 hover:text-gray-900">Our Mission</a></li>
+            <li><a href="#" className="text-gray-600 hover:text-gray-900">Get in Touch</a></li>
+            <li><a href="#" className="text-gray-600 hover:text-gray-900">Ask Anything</a></li>
+            <li><a href="#" className="text-gray-600 hover:text-gray-900">Insights & Stories</a></li>
           </ul>
         </div>
       </nav>
@@ -73,7 +73,7 @@ const ProductDetail = () => {
             </div>
             
             <div className="lg:w-2/5">
-              <h1 className="text-4xl font-serif mb-3">Mindbrush Journal</h1>
+              <h1 className="text-4xl font-serif mb-3">Dear Me Emotional Wellness Kit</h1>
               
               <div className="flex items-baseline mb-4">
                 <span className="text-gray-500 line-through mr-2">Rs. 1,400.00</span>
@@ -106,7 +106,7 @@ const ProductDetail = () => {
               </div>
               
               <div className="mb-6 text-gray-700">
-                <p>Self-Care is a habit that deserves to be nurtured. The Mindbrush journal will help you create, build and maintain this new habit for a happier you.</p>
+                <p>A hybrid self-care system designed for tweens and teens. Includes a digital app and physical tools like a printed journal, emotion cards, and mindfulness challenges – making emotional wellness fun, accessible, and age-appropriate.</p>
               </div>
               
               <div className="mb-6">
@@ -117,8 +117,8 @@ const ProductDetail = () => {
                     onChange={(e) => setSelectedColor(e.target.value)}
                     className="w-full bg-white border border-gray-300 rounded-md py-3 pl-4 pr-10 text-gray-700 appearance-none focus:outline-none focus:border-blue-500"
                   >
-                    <option value="Pristine White">Pristine White</option>
-                    <option value="Sky Blue">Sky Blue</option>
+                    <option value="Pastel Blue">Pastel Blue</option>
+                    <option value="Lavender Purple">Lavender Purple</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                     <ChevronDown className="h-4 w-4 text-gray-500" />
@@ -155,13 +155,13 @@ const ProductDetail = () => {
                 <Button
                   className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-6"
                 >
-                  Add to cart
+                  Add to Cart
                 </Button>
                 
                 <Button
                   className="w-full bg-black hover:bg-gray-800 text-white font-medium py-6"
                 >
-                  Buy Now
+                  Start My Journey
                 </Button>
                 
                 <div className="text-center text-sm text-gray-600">
@@ -170,17 +170,11 @@ const ProductDetail = () => {
                     Secured by <img src="https://razorpay.com/build/browser/static/razorpay-logo.84b15fc7.svg" alt="Razorpay" className="h-4 inline" />
                   </div>
                 </div>
-                
-                <Button
-                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-6"
-                >
-                  Buy it now
-                </Button>
               </div>
               
               <div className="mt-8 border-t pt-6 space-y-2">
                 <Accordion 
-                  title="Preview the Journal for FREE(Below)" 
+                  title="Preview the Kit for FREE(Below)" 
                   icon="zap"
                 >
                   <p>View the journal pages and contents before purchasing.</p>
@@ -190,28 +184,28 @@ const ProductDetail = () => {
                   title="THE 10-Second Summary" 
                   icon="clock"
                 >
-                  <p>Quick benefits and features of the Mindbrush Journal.</p>
+                  <p>Quick benefits and features of the Dear Me Emotional Wellness Kit.</p>
                 </Accordion>
                 
                 <Accordion 
-                  title="Why it works" 
+                  title="Why It's Effective" 
                   icon="help-circle"
                 >
-                  <p>The science behind the journal's effectiveness.</p>
+                  <p>The science behind the kit's effectiveness for teen emotional wellness.</p>
                 </Accordion>
                 
                 <Accordion 
-                  title="Community Reviews" 
+                  title="Teen Success Stories" 
                   icon="message-circle"
                 >
-                  <p>What our customers are saying about the journal.</p>
+                  <p>What teens and parents are saying about the Dear Me Kit.</p>
                 </Accordion>
                 
                 <Accordion 
-                  title="How is it created" 
+                  title="Eco-Friendly Design" 
                   icon="leaf"
                 >
-                  <p>Our process and materials used in making the journal.</p>
+                  <p>Our sustainable process and materials used in making the kit.</p>
                 </Accordion>
                 
                 <Accordion 
@@ -222,17 +216,17 @@ const ProductDetail = () => {
                 </Accordion>
                 
                 <Accordion 
-                  title="FAQ's" 
+                  title="Ask Anything" 
                   icon="file-text"
                 >
-                  <p>Frequently asked questions about the journal.</p>
+                  <p>Frequently asked questions about the emotional wellness kit.</p>
                 </Accordion>
                 
                 <Accordion 
-                  title="Bulk/Corporate Orders" 
+                  title="School & Group Orders" 
                   icon="box"
                 >
-                  <p>Information for bulk purchasing and corporate gifting.</p>
+                  <p>Information for bulk purchasing and educational partnerships.</p>
                 </Accordion>
               </div>
             </div>
@@ -242,16 +236,16 @@ const ProductDetail = () => {
       
       <div className="bg-yellow-100 py-6 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-serif">Click play to see what's inside the journal</h2>
+          <h2 className="text-2xl font-serif">Click play to see how Dear Me helps teens</h2>
         </div>
       </div>
       
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-serif mb-8">Preview the Journal</h2>
+          <h2 className="text-3xl font-serif mb-8">Preview the Kit</h2>
           <div className="max-w-4xl mx-auto bg-white border rounded-lg shadow-lg p-8">
             <div className="aspect-video bg-gray-100 rounded flex items-center justify-center">
-              <p className="text-gray-500">Journal preview video</p>
+              <p className="text-gray-500">Emotional wellness kit preview video</p>
             </div>
           </div>
         </div>
