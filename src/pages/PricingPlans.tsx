@@ -18,6 +18,7 @@ const PricingPlans = () => {
         "Physical Emotional Connect Cards",
         "Access to offline games",
         "Full access to web app games",
+        "Monthly therapy session with certified therapists",
         "1 year of digital content access",
         "Free shipping across India"
       ],
@@ -34,6 +35,7 @@ const PricingPlans = () => {
         "Physical Emotional Connect Cards",
         "Access to offline games",
         "Full access to web app games",
+        "Monthly therapy session with certified therapists",
         "Flexible monthly subscription",
         "Cancel anytime"
       ],
@@ -116,13 +118,17 @@ const PricingPlans = () => {
                     <p className="text-gray-600">Physical card deck designed to identify and express feelings effectively.</p>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h4 className="font-semibold text-lg mb-3">Games Access</h4>
-                    <p className="text-gray-600">Both offline activities and web app games for emotional intelligence development.</p>
+                    <h4 className="font-semibold text-lg mb-3">Monthly Therapy</h4>
+                    <p className="text-gray-600">One therapy session per month with our certified therapists specializing in adolescent mental health.</p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-8 text-center">
+              <div className="mt-12 text-center">
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+                  <h4 className="font-semibold text-lg mb-2">About Our Therapy Sessions</h4>
+                  <p className="text-gray-700">Both plans include a monthly 45-minute therapy session with our approved and certified therapists who specialize in adolescent mental health. Sessions can be conducted online or in-person at select locations.</p>
+                </div>
                 <p className="text-gray-500">Questions about our plans? <a href="#" className="text-dearme-primary underline">Contact our support team</a></p>
               </div>
             </div>

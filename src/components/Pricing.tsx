@@ -27,6 +27,7 @@ const Pricing = () => {
         "90-day gratitude practice",
         "Self-reflection sections",
         "Digital companion app access",
+        "Monthly therapy session with certified therapist",
         "Free shipping worldwide",
       ],
       isPopular: true,
