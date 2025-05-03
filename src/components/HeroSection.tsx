@@ -1,8 +1,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Penguin } from "lucide-react";
 import { Link } from "react-router-dom";
+import InteractiveJournal from "./InteractiveJournal";
 
 const HeroSection = () => {
   return (
@@ -39,11 +39,7 @@ const HeroSection = () => {
           <div className="lg:w-1/2 flex justify-center lg:justify-end animate-float">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-mindblue-100 to-mindpurple-100 rounded-xl blur-xl opacity-70"></div>
-              <img
-                src="public/lovable-uploads/f1d52397-f748-4b2f-8d36-c8d419b71ec6.png"
-                alt="Dear Me Emotional Wellness Kit"
-                className="relative w-full max-w-md rounded-xl shadow-xl"
-              />
+              <InteractiveJournal />
             </div>
           </div>
         </div>
