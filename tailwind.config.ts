@@ -25,17 +25,25 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				// Dear Me brand colors
+				dearme: {
+					primary: '#487b8c',    // Primary teal
+					accent: '#4a7c8d',     // Accent teal (hover states)
+					text: '#000000',       // Base text color
+					background: '#ffffff', // Clean white background
+					light: '#fefefe',      // Light accent for cards
+				},
 				mindblue: {
 					50: '#F0F7FF',
 					100: '#E0EFFF',
 					200: '#C0DFFF',
 					300: '#80BFFF',
 					400: '#409FFF',
-					500: '#007FFF',
-					600: '#0066CC',
-					700: '#004C99',
-					800: '#003366',
-					900: '#001933',
+					500: '#487b8c', // Updated to match primary color
+					600: '#4a7c8d', // Updated to match accent color
+					700: '#3a636f', // Darker shade
+					800: '#2a4a54', // Even darker
+					900: '#1a3039', // Darkest shade
 				},
 				mindpurple: {
 					50: '#F5F0FF',

@@ -25,7 +25,7 @@ const Navbar = () => {
               />
             </Link>
             <div className="hidden md:ml-8 md:flex">
-              <button className="text-gray-600" aria-label="Search">
+              <button className="text-dearme-primary" aria-label="Search">
                 <Search className="h-5 w-5" />
               </button>
             </div>
@@ -37,29 +37,29 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="flex items-center text-gray-600 hover:text-mindblue-500 transition-colors duration-200"
+                className="flex items-center text-dearme-primary hover:text-dearme-accent transition-colors duration-200"
               >
                 {item.icon}
                 {item.name}
               </Link>
             ))}
-            <button className="text-gray-600" aria-label="Cart">
+            <button className="text-dearme-primary" aria-label="Cart">
               <ShoppingCart className="h-5 w-5" />
             </button>
           </nav>
 
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center gap-4">
-            <button className="text-gray-600" aria-label="Search">
+            <button className="text-dearme-primary" aria-label="Search">
               <Search className="h-5 w-5" />
             </button>
-            <button className="text-gray-600" aria-label="Cart">
+            <button className="text-dearme-primary" aria-label="Cart">
               <ShoppingCart className="h-5 w-5" />
             </button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 text-dearme-primary" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
@@ -76,7 +76,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="flex items-center text-gray-600 hover:text-mindblue-500 transition-colors duration-200 py-2 px-4"
+                      className="flex items-center text-dearme-primary hover:text-dearme-accent transition-colors duration-200 py-2 px-4"
                     >
                       {item.icon}
                       {item.name}
