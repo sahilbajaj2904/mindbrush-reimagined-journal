@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,30 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				mindblue: {
+					50: '#F0F7FF',
+					100: '#E0EFFF',
+					200: '#C0DFFF',
+					300: '#80BFFF',
+					400: '#409FFF',
+					500: '#007FFF',
+					600: '#0066CC',
+					700: '#004C99',
+					800: '#003366',
+					900: '#001933',
+				},
+				mindpurple: {
+					50: '#F5F0FF',
+					100: '#EBE0FF',
+					200: '#D6C0FF',
+					300: '#BD80FF',
+					400: '#A340FF',
+					500: '#8A00FF',
+					600: '#6E00CC',
+					700: '#530099',
+					800: '#370066',
+					900: '#1C0033',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -68,6 +93,10 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Playfair Display', 'serif'],
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -84,11 +113,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
