@@ -1,14 +1,14 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart, Gamepad, Award, Cards } from "lucide-react";
+import { Menu, Search, ShoppingCart, Gamepad, Award, CreditCard } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
     { name: "Games", href: "/games", icon: <Gamepad className="mr-2 h-4 w-4" /> },
-    { name: "Emotional Connect Cards", href: "/cards", icon: <Cards className="mr-2 h-4 w-4" /> },
+    { name: "Emotional Connect Cards", href: "/cards", icon: <CreditCard className="mr-2 h-4 w-4" /> },
     { name: "Reward Point Tracker", href: "/rewards", icon: <Award className="mr-2 h-4 w-4" /> },
   ];
 
