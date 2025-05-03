@@ -2,10 +2,11 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MarketplaceSection from "@/components/MarketplaceSection";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
+import ProductHighlights from "@/components/ProductHighlights";
 
 const Index = () => {
   return (
@@ -13,9 +14,10 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <ProductHighlights />
+        <MarketplaceSection />
         <Features />
         <Testimonials />
-        <Pricing />
       </main>
       <Footer />
     </div>
