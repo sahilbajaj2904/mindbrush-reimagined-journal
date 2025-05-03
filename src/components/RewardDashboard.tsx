@@ -15,15 +15,25 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
 import { Award, Check, Star } from "lucide-react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
+import { 
+  AreaChart, 
+  Area, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  ResponsiveContainer, 
+  PieChart, 
+  Pie, 
+  Cell, 
+  Legend 
+} from "recharts";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const RewardDashboard = () => {
+  const isMobile = useIsMobile();
+
   // Mock data for line chart showing points over time
   const progressData = [
     { day: "Day 1", points: 5 },
@@ -149,11 +159,16 @@ const RewardDashboard = () => {
             <CardDescription>Track your points growth over time</CardDescription>
           </CardHeader>
           <CardContent className="pt-2">
-            <div className="h-[300px]">
+            <div className="h-[300px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart
                   data={progressData}
-                  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                  margin={{ 
+                    top: 10, 
+                    right: isMobile ? 10 : 30, 
+                    left: isMobile ? -20 : 0, 
+                    bottom: 0 
+                  }}
                 >
                   <defs>
                     <linearGradient id="colorPoints" x1="0" y1="0" x2="0" y2="1">
@@ -162,10 +177,24 @@ const RewardDashboard = () => {
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                  <XAxis dataKey="day" tick={{ fontSize: 12 }} />
-                  <YAxis tick={{ fontSize: 12 }} />
+                  <XAxis 
+                    dataKey="day" 
+                    tick={{ fontSize: 12 }} 
+                    padding={{ left: 10, right: 10 }}
+                    tickMargin={8}
+                  />
+                  <YAxis 
+                    tick={{ fontSize: 12 }}
+                    width={40}
+                    tickMargin={8}
+                  />
                   <Tooltip
-                    contentStyle={{ backgroundColor: "white", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}
+                    contentStyle={{ 
+                      backgroundColor: "white", 
+                      borderRadius: "8px", 
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                      border: "1px solid #f0f0f0"
+                    }}
                     labelStyle={{ fontWeight: "bold", marginBottom: "4px" }}
                   />
                   <Area
@@ -175,6 +204,7 @@ const RewardDashboard = () => {
                     fillOpacity={1}
                     fill="url(#colorPoints)"
                     name="Points"
+                    activeDot={{ r: 6 }}
                   />
                 </AreaChart>
               </ResponsiveContainer>
@@ -190,17 +220,17 @@ const RewardDashboard = () => {
           <CardContent>
             <div className="h-[300px] flex items-center justify-center">
               <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
+                <PieChart margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
                   <Pie
                     data={pointsDistribution}
                     cx="50%"
                     cy="50%"
                     labelLine={false}
-                    outerRadius={80}
+                    outerRadius={isMobile ? 60 : 80}
                     fill="#8884d8"
                     dataKey="value"
                     nameKey="name"
-                    label={({ name, percent }) => `${(percent * 100).toFixed(0)}%`}
+                    label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
                   >
                     {pointsDistribution.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
@@ -210,9 +240,17 @@ const RewardDashboard = () => {
                   <Legend 
                     layout="vertical" 
                     verticalAlign="middle" 
-                    align="right"
+                    align={isMobile ? "center" : "right"}
                     iconSize={10}
                     iconType="circle"
+                    wrapperStyle={{ 
+                      paddingLeft: isMobile ? 0 : 20,
+                      paddingTop: isMobile ? 20 : 0,
+                      position: isMobile ? "relative" : "absolute", 
+                      right: isMobile ? 0 : 10,
+                      top: isMobile ? 0 : "50%",
+                      transform: isMobile ? "none" : "translateY(-50%)"
+                    }}
                     payload={pointsDistribution.map(item => ({
                       value: item.name,
                       type: 'circle',
