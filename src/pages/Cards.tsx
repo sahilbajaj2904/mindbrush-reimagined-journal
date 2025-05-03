@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Star } from "lucide-react";
+import EmotionalCardDeck from "@/components/EmotionalCardDeck";
 
 const Cards = () => {
   const cardSets = [
@@ -37,9 +38,13 @@ const Cards = () => {
             <h1 className="text-4xl font-bold mb-4 text-dearme-text">Emotional Connect Cards</h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Our Emotional Connect Cards help children identify, understand, and express their
-              emotions in a healthy way. Each card features our penguin character in different
-              emotional states with prompts for discussion.
+              emotions in a healthy way. Each card features prompts for reflection and expression.
             </p>
+          </div>
+          
+          {/* Interactive Card Deck Component */}
+          <div className="mb-16">
+            <EmotionalCardDeck />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
