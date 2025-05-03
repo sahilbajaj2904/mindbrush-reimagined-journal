@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -23,7 +24,7 @@ const MarketplaceSection = () => {
       name: "Dear Calm",
       description: "A safe space to untangle anxious thoughts and build inner peace.",
       price: "₹999",
-      image: "/lovable-uploads/1289542d-fc29-4c51-ac54-e95b021b7ff2.png",
+      image: "/lovable-uploads/1f4c6378-cebf-4ca5-9cab-427617b8b3e5.png",
       tag: "Bestseller",
       category: "anxiety"
     },
