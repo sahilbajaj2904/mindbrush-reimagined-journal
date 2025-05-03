@@ -19,11 +19,11 @@ const ProductGallery = () => {
 
   return (
     <div>
-      <div className="mb-4 aspect-square relative overflow-hidden rounded-lg border">
+      <div className="mb-4 aspect-square relative overflow-hidden rounded-lg border shadow-md">
         {showJournal ? (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-4">
             <div className="w-full h-full flex items-center justify-center">
-              <div className="w-full max-w-md transform scale-90 relative">
+              <div className="w-full max-w-md transform scale-[0.85] relative">
                 {/* Book shadow effect */}
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] h-8 bg-black opacity-10 blur-md rounded-full z-0"></div>
                 <InteractiveJournal />
@@ -43,7 +43,7 @@ const ProductGallery = () => {
         {thumbnails.map((thumb, index) => (
           <button 
             key={index}
-            className={`border rounded-md overflow-hidden aspect-square ${selectedImage === thumb && !showJournal ? 'border-black' : 'border-gray-200'}`}
+            className={`border rounded-md overflow-hidden aspect-square ${selectedImage === thumb && !showJournal ? 'border-black shadow-md' : 'border-gray-200 hover:border-gray-300'}`}
             onClick={() => {
               setSelectedImage(thumb);
               setShowJournal(false);
@@ -57,7 +57,7 @@ const ProductGallery = () => {
           </button>
         ))}
         <button 
-          className={`border rounded-md overflow-hidden aspect-square flex items-center justify-center ${showJournal ? 'border-black bg-mindblue-50' : 'border-gray-200'}`}
+          className={`border rounded-md overflow-hidden aspect-square flex items-center justify-center ${showJournal ? 'border-black bg-mindblue-50 shadow-md' : 'border-gray-200 hover:border-gray-300 hover:bg-mindblue-50/50'}`}
           onClick={() => setShowJournal(true)}
         >
           <BookOpen className="h-5 w-5 text-mindblue-500" />
